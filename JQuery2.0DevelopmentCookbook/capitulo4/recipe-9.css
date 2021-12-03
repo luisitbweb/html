@@ -1,0 +1,27 @@
+/* 
+    Created on : 26/03/2019, 04:19:14
+    Author     : luis_
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+body{
+    background-color: #333333;
+    font-family: 'Lato', sans-serif;
+}
+h1{
+    line-height: 60px;
+    padding: 0;
+    margin: 0 0 15px 0;
+    text-align: center;
+    color: #333;
+    font-weight: 300;
+}
+.frame{
+    width: 700px;
+    margin: 50px auto auto auto;
+    background-color: #FFF;
+    box-shadow: #000 3px 3px 2px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}

@@ -1,0 +1,232 @@
+@charset "UTF-8";
+@import url();
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04/12/2015, 14:16:01
+    Author     : Luis Carlos
+
+    Prefix        Browsers
+    -moz-          Firefox
+    -ms-           Internet Explorer
+    -o-            Opera
+    -webkit-       Google Chrome, Safari
+   
+    article, aside, figure, footer, header, nav, section {
+    display: block;
+    margin: 0;
+    padding: 0;
+    }
+*/
+#frame{
+    background: -moz-linear-gradient(left top, yellow, blue, indigo);
+    background: -o-linear-gradient(bottom right, yellow, blue, indigo);
+    background: -webkit-linear-gradient(left, yellow, blue, indigo);
+    background: -ms-linear-gradient(right, yellow, blue, indigo);
+}
+
+
+img[alt]{
+    border: 4px solid red;
+}
+input[type='text']{
+    width: 250px;
+}
+a[href^='http://']{
+    color: red;
+}
+a[href$='.pdf']{
+    padding-right: 10px;
+    background-image: url(../w3schools/_imagens/PDF.jpg);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+a{
+    font-weight: bold;
+}
+a:link{
+    color: #3300ff;
+}
+a:visited{
+    color: #dddddd;
+}
+a:hover{
+    color: #9999ff;
+}
+a:active{
+    color: blue;
+}
+a:focus{
+    color: yellowgreen;
+}
+abbr{
+    cursor: help;
+}
+p.intro:first-letter{
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    font-family: 'Trebuchet MS', arial, helvetica, sans-serif;
+    text-decoration: underline overline;
+}
+p:first-line{
+    text-transform: uppercase;
+}
+ul{
+    font-size: 0.75rem;
+}
+.no-blur{
+    text-shadow: 0.1em 0.1em rgba(0,0,0,0.4);
+}
+.blur{
+    text-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.4);
+}
+.color-blur{
+    text-shadow: 0.1em 0.1em 0.2em rgba(0,102,102,0.4);
+}
+.raised{
+    text-shadow: -1px -1px #FFE79B, 1px 1px #7F744D;
+}
+.inset{
+    text-shadow: -1px -1px #7F744D, 1px 1px #FFE79B;
+}
+@font-face{
+    font-family: 'My Font';
+    src: url('myfont.eot');
+    src: url('myfont.eot?#iefix') format ('embedded-opentype'),
+        url('myfont.woff') format ('woff'),
+        url('myfont.ttf') format ('truetype'),
+        url('myfont.svg') format ('svg');
+    font-stretch: semi-condensed;
+    unicode-range: U+201c-d;
+}
+
+#box1{
+    width: 100px;
+    height: 100px;
+    background-color: #F00;
+    margin: 10px;
+    transition-property: background-color, width, height;
+    transition-duration: 1s;
+    transition-delay: 2s, 1s, 0s;
+}
+#box1:hover{
+    background-color: #006;
+    width: 150px;
+    height: 150px;
+    transition-delay: 0s, 1s, 2s;
+}
+
+.frontimg{
+    position: absolute;
+    transition: opacity 500ms linear;
+    opacity: 1;
+}
+.frontimg:hover{
+    opacity: 0;
+}
+
+.scaleimg:first-child{
+    transform-origin: left top;
+    transform: rotate(-6deg);
+}
+.scaleimg:last-child{
+    transform-origin: right top;
+    transform: rotate(6deg);
+}
+.scaleimg{
+    margin: 10px;
+    padding: 10px;
+    background-color: #FFF;
+    border: 1px solid #000;
+    transition: ease-in-out 1s;
+    position: relative;
+    z-index: 1;
+}
+.scaleimg:hover{
+    transform: scale(1.5);
+    z-index: 2;
+}
+
+@keyframes highlight {
+    from {
+        background-color: rgba(255,204,0,0);
+        animation-timing-function: ease-out;
+    }
+    50% {
+        background-color: rgba(255,204,0,.3);
+        animation-timing-function: ease-out;
+    }
+    to {
+        background-color: rgba(255,204,0,0);
+    }
+}
+article:target {
+    animation-name: highlight;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(500px);
+    }
+}
+#partial {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    background-color: #036;
+    animation-name: slide;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1.5;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
+@keyfremes pulsate{
+    from{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+#box{
+    /*other styles omitted*/
+
+    animation-name: pulsate;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+#box:hover{
+    animation-play-state: paused;
+}
+
+anime{
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-delay: 2s;
+}

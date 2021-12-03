@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Estudo Da Tag HTML5</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="_imagens/avata.ico"/>
+        <link rel="stylesheet" type="text/css" href="testevalorespropriedades.css">
+        <style>
+            h3{color: red;}
+            h6{font-size: 15pt;}
+            a{color: white; text-transform: lowercase;}
+        </style>
+        <!-- <base href="" target="_blank"/> -->
+        <script type="text/javascript" src="javatestescrip.js"></script>
+        <noscript></noscript>
+    </head>
+    <body id="topo" ononline="online()" onoffline="offline()">
+        <!-- onoffline executa javascript quando o navegador esta offline. onbeforeprint evento mostrar caixa de alogo igual onafterprint um mostra antes e outro mostra depois de imprimir. -->
+
+        <img id="olho" src="_imagens/olhodedeus.gif" alt="Olho de Deus"/><br /><br />
+
+        <object style="background-color: #9999ff;  padding-left: 0px;" width="400" height="200" data="https://www.youtube.com/embed/jtDnmVjPfvM">
+            <param name="autoplay" value="true"/>
+        </object>
+
+        <div id="fonte">
+            <p>
+                O arquivo "sansation_bold.woff" é outro arquivo de fonte, que contém os caracteres em negrito para a fonte Sansation.
+                Browsers vai usar isso sempre que um pedaço de texto com o font-family "myFirstFont" deve processar como negrito.
+                Desta forma, você pode ter muitas regras @ font-face para a mesma fonte.  
+            </p>
+        </div>
+
+        <h1>REVENDO CONCEITOS 1</h1>
+
+        <p id="primeirop">Você já se <bdo dir="rtl">perguntou o que é</bdo>, de fato, um texto? Geralmente, 
+            entendemos o texto como um <bdi>conjunto de frases</bdi>, ou seja, algo que foi feito para ser lido. 
+            Mas a definição de texto não é tão simples quanto parece.</p> 
+        <div id="teste">
+            <p>Imagine, por <b>exemplo</b>, que você está lendo um livro e, de repente, 
+                encontra em uma página qualquer um papel com a palavra “madeira” exponenc<wbr>ialmente grande<wbr>. 
+                Ora, certamente você ficará intrigado ou simplesmente não dará importância a isso. 
+                Agora, vamos imaginar outra situação: <u>você está no meio de uma floresta</u> e ouve alguém 
+                gritar: <q>Madeira!</q>. Bem, se você pretende <strong>preservar sua vida</strong>, sua reação imediata é 
+                sair correndo. Isso acontece porque a situação em que você se encontra levou-o a 
+                interpretar o grito como um sinal de alerta.</p> 
+
+            <pre>
+    A partir desses exemplos simples, H<sub>2</sub><sup>O</sup> podemos chegar a algumas conclusões importantes: 
+1º - os textos não são apenas escritos, eles também podem ser orais; 
+2º - os textos não são simples amontoados de palavras ou frases, ou seja, eles precisam 
+fazer sentido.
+            </pre>
+            <div>
+                <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                    Na segunda <mark>situação</mark>, uma única palavra foi capaz de transmitir uma mensagem de sentido 
+                    completo, por isso ela pode ser <i>considerada um texto</i>. Mas o que leva um texto a fazer 
+                    sentido? Isso depende de alguns fatores, como o contexto e o conhecimento de mundo.
+                </blockquote></div>
+
+            <div>
+                <h2>CONTEXTO 2</h2>
+
+                <p>O contexto pode ser explícito, <em>quando é expresso por palavras</em> (o texto em que se encontra 
+                    a frase ou a frase em que se encontra a palavra), ou implícito, quando está embutido na 
+                    situação em que o <kbd>texto é produzido. Logo, a simples mudança</kbd> de contexto faz com que a 
+                    palavra “madeira” seja interpretada de maneiras diferentes. Na primeira situação, embora 
+                    a <var>palavra esteja dentro de um livro</var>, <time>11:58</time> ela está totalmente fora de contexto:<progress value="52" max="100"></progress> por isso não
+                    produz sentido algum.</p> </div>
+
+            <div><h3>Conhecimento de mundo 3</h3> 
+
+                <p>Ao longo de sua vida, <code>o leitor adquire conhecimentos utilizados durante a leitura</code> dos textos.
+                    O leitor constrói o sentido do texto quando articula diferentes níveis de conhecimento, 
+                    entre eles o <del>conhecimento de mundo</del>. Esse tipo de <s>conhecimento costuma ser adquirido</s> 
+                    informalmente, através de nossas experiências pessoais e convívio em sociedade. Ativar 
+                    seu <ins>conhecimento de mundo no momento certo</ins> pode ser útil tanto para salvar sua vida no 
+                    meio da floresta ou para resolver questões do ENEM.</p></div>
+
+            <div>
+                <h4>Textos verbais e visuais 4</h4>
+
+                <p>Até aqui, <cite>vimos que os textos podem ser orais ou escritos</cite>. Mas essa noção precisa ser 
+                    ampliada, pois há textos que não contam com o auxílio da palavra, seja ela escrita ou oral. 
+                    É o caso, por exemplo, da <dfn title="Fotografia e Pintura">fep</dfn>. Dizemos, então, que há textos verbais 
+                    e visuais. Há ainda textos que utilizam os dois recursos, como os filmes, que usam imagens, 
+                    diálogos e legendas.</p> </div>
+
+            <p>Então, <samp>chegamos ao conceito</samp> de texto mais <small>ampliado</small> e consistente:<meter value="3" min="0" max="10">2 out of 10</meter> todo enunciado que faz 
+                sentido para um determinado grupo em uma determinada situação. No ENEM:<meter value="0.8">80%</meter> essa noção mais 
+                moderna de texto é a que vale</p>
+        </div><br />
+
+        <div id="fuc" oncontextmenu="oncon()" contextmenu="meumenu">
+            <p>Botao direito do mouse dentro desta caixa para ver o menu de context!</p>
+
+            <menu type="context" id="meumenu">
+                <menuitem label="regresh" onclick="window.location.reload();" icon="ico_reload.png">       
+                </menuitem>
+                <menu label="Share on...">
+                    <menuitem label="Twitter" icon="ico_twitter.png" onclick="window.open('//twitter.com/intent/tweet?text=' +
+                                    window.location.href);">
+                    </menuitem>
+                    <menuitem label="Facebook" icon="ico_facebook.png" onclick="window.open('//facebook.com/sharer/sharer.php?u=' +
+                                    window.location.href);">
+                    </menuitem>
+                </menu>
+                <menuitem label="Email This Page" onclick="window.location = 'mailto:?body=' + window.location.href;"></menuitem>
+            </menu>
+        </div><br />
+
+        <form id="formulario" onreset="res()" onsubmit="sub()">
+            Arquivo:<input type="file" accept="audia/*" /><br /><br />
+            checked:<input type="checkbox" /><br /><br />
+            cor:<input type="color" /><br /><br />
+            data:<input type="date" /><br /><br />
+            datetime:<input type="datetime" /><br /><br />
+            datatime-local:<input type="datetime-local" /><br /><br />
+            email:<input type="email" oninvalid="oniva()" required="required"/><br /><br />
+            hidden:<input type="hidden" /><br /><br />
+            image:<input type="image" alt="imagem" /><br /><br />
+            mes:<input type="month" /><br /><br />
+            numero:<input type="number" /><br /><br />
+            Button:<button type="reset" name="teste" value="KK">clique aki!</button><br /><br />
+            senha:<input placeholder='Diga "Ok Google"' type="password" /><br /><br />
+            radio:<input type="radio" /><br /><br />
+            range:<input type="range" /><br /><br />
+            reset:<input type="reset" /><br /><br />
+            pesquisa:<input type="search" id="sear" onsearch="sea()"/><br /><br />
+            botao:<input type="submit" /><br /><br />
+            telefone:<input type="tel" /><br /><br />
+            texto:<input type="text" name="fnome" id="fnome" onblur="blurBl()" onfocus="focusFoc()"/><br /><br />
+            hora:<input type="time" /><br /><br />
+            url:<input type="url" value="selecione o texto." onselect="sel()"/><br /><br />
+            week:<input type="week" /><br /><br />
+            Lista:<input list="browsers" /><br /><br />
+            <p id="demo"></p>
+            <datalist id="browsers">
+                <option value="internet explorer">explorer</option>
+                <option value="opera">opera</option>
+                <option value="chrome">chrome</option>
+                <option value="firefox">firefox</option>
+            </datalist>
+            segurança:<keygen name="teste" /><br /><br />
+            <fieldset>
+                <legend>Teste de tags</legend>
+                textarea:<textarea id="on" oninput="onin()" wrap="hard" maxlength="50" cols="4" rows="5" name="teste" placeholder="digite um texto"></textarea><br /><br />
+                <p id="oni"></p>
+                <select name="teste" id="onchi" onchange="funOnchi()">
+                    <optgroup label="swedish cars">
+                        <option value="volbo">volvo</option>
+                        <option value="saab">saab</option>
+                    </optgroup>
+                    <optgroup label="german cars">
+                        <option value="mercedes">mercedes</option>
+                        <option value="audi">audi</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+        </form><br />
+
+        <fieldset>
+            <legend>Listas: Não ordenadas, Ordenada e lista de descrição</legend>
+            <ul>
+                <li>lista não ordenada</li>
+                <li>lista não ordenada</li>
+                <li>lista não ordenada</li>
+                <li>lista não ordenada</li>
+            </ul><br />
+
+            <ol>
+                <li>lista ordenada</li>
+                <li>lista ordenada</li>
+                <li>lista ordenada</li>
+                <li>lista ordenada</li>
+            </ol><br />
+
+            <dl>
+                <dt>Define uma lista de descrição</dt>
+                <dd>lista 1</dd>
+                <dd>lista 1</dd>
+                <dd>lista 1</dd>
+                <dd>lista 1</dd>
+                <dt>Define a segunda lista de descrição</dt>
+                <dd>lista 2</dd>
+                <dd>lista 2</dd>
+                <dd>lista 2</dd>
+                <dd>lista 2</dd>
+            </dl>
+        </fieldset><br /><br />
+
+        <table>
+            <caption>Poupança Mensal</caption>
+            <tr>
+                <th>Mês</th>
+                <th>Poupança</th>
+            </tr>
+            <tr>
+                <td>Janeiro</td>
+                <td>$100</td>
+            </tr>
+        </table><br /><br />
+
+        <table>
+            <caption>Grupo</caption>
+            <thead>
+                <tr>
+                    <th>Mês</th>
+                    <th>Poupança</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td>Soma</td>
+                    <td>$180</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>Janeiro</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>Fevereiro</td>
+                    <td>$80</td>
+                </tr>
+            </tbody>
+        </table><br /><br />
+
+        <table>
+            <caption>Teste Colgroup</caption>
+            <colgroup>
+                <col span="2" style="background-color: red"/>
+                <col style="background-color: yellow"/> 
+            </colgroup>
+            <tr>
+                <th>ISBN</th>
+                <th>Titulo</th>
+                <th>Preço</th>
+            </tr>
+            <tr>
+                <td>3476896</td>
+                <td>Meu Primeiro HTML</td>
+                <td>$53</td>
+            </tr>
+            <tr>
+                <td>5869207</td>
+                <td>Meu Primeiro CSS</td>
+                <td>$49</td>
+            </tr>
+        </table><br /><br />
+
+        <iframe src="http://w3schools.com">O navegador não suporta a exibição</iframe><br /><br />
+
+        <figure>
+            <img src="_imagens/home.png" alt="imagem home não pode ser carregada" width="100" height="150"/><br />
+            <figcaption>Teste de legenda</figcaption>
+        </figure><br />
+
+        <img src="_imagens/w3schools.jpg" alt="map imagem" width="100" height="150" usemap="#teste"/>
+
+        <map name="teste">
+            <area shape="rect" coords="4,100,101,141" alt="teste" href="http://w3schools.com" target="_blank"/>
+            <area shape="circle" coords="83,35,11" alt="teste" href="http://www.naruto.com.br" target="_blank"/>
+            <area shape="poly" coords="102,27,102,9,94,1,73,1,69,20,88,16" alt="teste" href="http://www.cursoemvideo.com/" target="_blank"/>
+        </map><br />
+
+        <video style="background-color: #9999ff;" width="400" height="200" poster="_imagens/avatar.gif" controls="controls">
+            <source src="_imagens/travessos.mp4" type="video/mp4"/>
+            Desculpe, mas não foi possivel carregar o Video.
+        </video>
+        <audio controls="">
+            <source src='_imagens/Martin.mp3' type="audio/mp3"/>
+            Desculpe, mas não foi possivel carregar o Audio.
+        </audio><br />
+
+        <div id="avatar">
+            <img src='_imagens/avatar.gif' alt='imagem'/>
+        </div><br /><br />
+
+        <div id="main">
+            <div style="background-color:coral;"></div>
+            <div style="background-color:lightblue;"></div>
+            <div style="background-color:pink;"></div>
+        </div><br />
+
+        <div>
+            <div style="color:coral; text-align:center; font-size: 25pt"><h4>teste</h4></div>
+            <div style="color:lightblue; text-align:center; font-size: 25pt"><h4>teste</h4></div>
+            <div style="color:pink; text-align:center; font-size: 25pt"><h4>teste</h4></div>
+        </div><br />
+
+        <nav>
+            <a rel="" href="">teste</a><br />
+            <a rel="" href="">teste</a><br />
+            <a rel="" href="">teste</a><br />
+            <a rel="" href="">teste</a><br />
+            <a rel="" href="">teste</a><br />
+        </nav><br />
+
+        <fieldset>
+            <legend>tag header</legend>
+            <header>
+                <h3>O titulo mais importate aqui.</h3>
+                <h5>O titulo menos importate aqui.</h5>
+                <p>Algumas informações adicionais do cabeçalho aqui.</p>
+            </header>
+        </fieldset>
+
+        <section>
+            <h2>A tag section</h2>
+            <p contenteditable="true">O fundo mundial para a natureza!</p>
+        </section>
+
+        <div id="abc">
+            <div style="background-color: coral;"></div>
+            <div style="background-color: khaki;"></div>
+            <div style="background-color: lightblue;"></div>
+            <div style="background-color: pink;"></div>
+            <div style="background-color: lightgrey;"></div>
+        </div><br />
+
+        <div id="ab">
+            <div style="background-color: coral;"></div>
+            <div style="background-color: khaki;"></div>
+            <div style="background-color: lightblue;"></div>
+            <div style="background-color: pink;"></div>
+            <div style="background-color: lightgrey;"></div>
+        </div><br />
+
+        <div id="abcg">
+            <div style="background-color: coral;"></div>
+            <div style="background-color: khaki;"></div>
+            <div style="background-color: lightblue;"></div>
+            <div style="background-color: pink;"></div>
+            <div style="background-color: lightgrey;"></div>
+        </div><br />
+
+        <div id="abd">
+            <div style="background-color: coral;"></div>
+            <div style="background-color: khaki;"></div>
+            <div style="background-color: lightblue;"></div>
+            <div style="background-color: pink;"></div>
+        </div><br />
+
+        <div id="anima"></div>
+
+        <article>
+            <pre class="teste">
+            O elemento article especifica, o conteudo independente e auto-suficiente.
+              fontes potenciais para o elemento article:
+                   forum de discussão.
+                   Blog.
+                   Noticia.
+                   Comentario.
+            </pre>
+        </article>
+
+        <aside class="teste">
+            <p>Minha familia e eu visitamos o epcot center neste verão.</p>
+            <h4 title="E um parque tematico da Disney.">Epcot Center</h4>
+            <p>O centro Epcot disney world, na Florida.</p>
+        </aside><br />
+
+        <details>
+            <summary>Copyright 1999-2015.</summary>
+            <p>A tag details especifica detalhes adicionais que o usuario pode exibir ou ocultar sob demanda.</p>
+            <p>teste teste teste teste</p>
+            <p>teste teste teste teste</p>
+        </details><br /><br />
+
+        <table>
+            <tr>
+                <th>Janeiro<dialog open>Esta e uma janela de dialogo aberta.</dialog></th>
+                <th>Fevereiro</th>
+                <th>Março</th>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>5</td>
+                <td>12</td>
+            </tr>
+        </table><br /><br />
+
+        <!-- atributos globais -->
+
+        aki tem link accesskey focalizado no h:<a href="http://www.w3schools.com/html" accesskey="h">HTML</a><br />
+        aki tem link accesskey focalizado no c:<a href="http://www.w3schools.com/css" accesskey="c">CSS tutorial</a><br />
+
+        <h1>Especies </h1>
+        <p dir="rtl" style="text-align: center;">:Clique em uma especie para ver qual o tipo dela</p>
+        <ul>
+            <li onclick="show(this)" id="owl" data-animal-type="Passaro">Coruja</li>
+            <li onclick="show(this)" id="salmon" data-animal-type="Peixe">Salmon</li>
+            <li onclick="show(this)" id="Tarantula" data-animal-type="Aranha">Tarantula</li>
+        </ul><br /><br />
+
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" dropzone="move"></div><br />
+        <p id="drag1" draggable="true" ondragstart="drag(event)">Este e um ponto arrastavel. Arraste este elemento para o retangulo.</p>
+
+        <p hidden="hidden">Este paragrafo deve ser escondido.</p>
+        <p>Este e um ponto visivel.</p>
+        <p>O atributo hidden não e suportado no IE10.</p>
+        <p contenteditable="true" spellcheck="true">Este e um paragrafo. Ele e editavel com verificação ortografica. Tente mudar o texto.</p>
+        <p translate="no">Do you speak english?</p>
+
+        <div class="container">
+            <div class="box">Essa div ocupa a metade da esquerda!</div>
+            <div class="box">Essa div ocupa a metade da direita!</div>
+            <div style="clear:both;"></div>
+        </div><br />
+
+        <p><a id="contra" href="http://www.w3schools.com">w3chools</a>contem tutoriais gratuitos e referencias.</p>
+
+        <abbr title="Luís Carlos Da Silva Santos"><q>LCDSS</q></abbr>
+        <embed src="helloworld.swf"/><br/>
+        <address>
+            e-mail: luis@teste.com<br>
+            Rua: cesar zago<br>
+            bairro: cidade jardim<br>
+            brasil<br>
+        </address>
+
+        <p>Imagem usada:</p>
+        <img alt="lampada" src="_imagens/lampada-acesa.jpg" width="32" height="32" id="lamp"/>
+        <p>Canvas:</p>
+        <canvas id="can">Seu navegador nao suporta tag HTML5 canvas!</canvas><br />
+        <button type="button" value="canvas" onclick="ipd('repeat')">Repetir lampada</button>
+        <button type="button" value="canvas" onclick="ipd('repeat-x')">Repetir lampada-x</button>
+        <button type="button" value="canvas" onclick="ipd('repeat-y')">Repetir lampada-y</button>
+        <button type="button" value="canvas" onclick="ipd('no-repeat')">Não Repetir lampada</button>
+
+        <footer>
+
+            <p>O footer elemento contem tipicamente:</p>
+            <p>informações autoria</p>
+            <p>informações sobre direitos autorais</p>
+            <p>informações de contato</p>
+            <p>mapa do site</p>
+            <a href="http://www.w3schools.com" tabindex="2"> W3schools </a><br />
+            <a href="http://www.google.com" tabindex="1"> Google </a><br />
+            <a href="http://www.microsoft.com" tabindex="3"> Microsoft </a><br />
+            <a href="#topo" tabindex="4">voltar ao top </a>
+            <p>documentos relacionados</p>
+
+            &COPY; Luís Carlos&Gg;
+        </footer>
+    </body>
+</html>

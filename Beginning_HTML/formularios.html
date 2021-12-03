@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Formularios HTML</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js"></script> 
+        <script type="text/javascript" src="html2canvas.js"></script> 
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var target = $('#assis');
+                html2canvas(target, {
+                    onrendered: function (canvas) {
+                        var img = canvas.toDataURL("formularios.html");
+                        window.open(img);
+                    }
+                });
+            });
+        </script> 
+    </head>
+    <body>
+        <div id="assis">
+            <h1>Contate nos</h1>
+            <p>Use o seguinte formulario para enviar uma mensagem de exemplo para Cafe</p>
+            <form>
+                <fieldset style="width: 60px;">
+                    <legend>Informação de Contato:</legend>
+                    <p><label for="exe"> Para:</label><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><input disabled="disabled" type="text" name="exemplecafe" value="Exemple Cafe" id="exe" size="20" maxlength="250"/></p>
+                    <p><label for="exep"> Para:</label><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><input type="text" name="exemplecafe" id="exep" size="20" maxlength="250"/></p>
+                    <p><label for="subject"> Assunto:</label><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><input type="text" name="exemplecafe" id="subject" size="20" maxlength="250"/></p>
+                    <p><label for="emailfrom">Email:</label><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><input onfocus="onfocus" type="email" name="emailbody" id="emailfrom" size="20" maxlength="250"/></p>
+                    <p><label for="txtfrom">Mensagem:</label><code>&nbsp;</code><textarea style="resize: vertical;" name="txtbody" id="txtfrom" cols="50" rows="10"></textarea></p>
+                    <p>Como você ouviu falar sobre nós:<code>&nbsp;</code><select name="selreferrer">
+                            <option value="google">Google</option>
+                            <option value="ad">Jornal local</option>
+                            <option value="friend">Amigos</option>
+                            <option value="other">Outros</option>
+                        </select></p>
+                    <p>Boletim de Noticas:<sub><input type="checkbox" name="chkbody" id="newslettersignup" checked="checked"/></sub></p>
+                    <p>Certifique-se esta caixa está marcada,<br /> 
+                        se você gostaria de receber 
+                        atualizações por email</p>
+                    <p><input type="submit" value="Enviar MSN"/></p>
+                </fieldset>
+            </form>
+        </div>  
+
+    </body>
+</html>

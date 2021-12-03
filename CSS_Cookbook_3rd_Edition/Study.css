@@ -1,0 +1,199 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04/10/2018, 03:26:23
+    Author     : luis_
+*/
+
+body{
+    margin: 5% 10% 0 10%;
+    padding: 1.5em;
+    border: 50px #666 ridge;
+}/*
+#content{
+    background-image: url(landscape.gif);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    height: 400px;
+    width: 674px;
+}
+h2{
+    margin: 0;
+    padding: 0;
+    background-image: url(kids.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    height: 400px;
+    width: 600px;
+}
+#boat{
+    background-image: url(boat.gif);
+    background-repeat: no-repeat;
+    display: block;
+    width: 207px;
+    height: 123px;
+    margin-left: 250px;
+    margin-top: 75px;
+}
+#box{
+    width: 214px;
+    background-image: url(bkgd_bottom.gif);
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+h2{
+    background-image: url(bkgd_top.gif);
+    background-position: left top;
+    background-repeat: no-repeat;
+    padding: 7px 7px 3px 7px;
+    margin: 0;
+    border-bottom: 1px solid #999;
+    font-size: 1.3em;
+    font-weight: normal;
+    color: #eee;
+}
+#innerhead{
+    background-image: url(corner_tl.gif);
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+h2{
+    background-image: url(corner_tr.gif);
+    background-position: top right;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 7px;
+    border-bottom: 1px solid #999;
+    font-size: 1.3em;
+    font-weight: normal;
+    color: #eee;
+}
+#content{
+    background-image: url(corner_bl.gif);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+#innercontent{
+    background-image: url(corner_br.gif);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}*/
+div#box{
+    width: 55%;
+    background-color: #999999;
+    background-image: url(corner_bl.gif);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+#head_outer{
+    background-image: url(corner_tr.gif);
+    background-repeat: no-repeat;
+}
+#head_inner{
+    background-image: url(corner_tr.gif);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+div p{
+    margin: 0;
+    padding: 7px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    background-image: url(corner_br.gif);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    color: #333333;
+    font-size: .8em;
+    line-height: 1.5;
+}
+#header{
+    min-width: 250px;
+    text-shadow: 0 -1px - rgba(0,0,0,.8);
+    box-shadow: 3px 3px 19px rgba(0,0,0,.8);
+    -webkit-box-shadow: 3px 3px 19px rgba(0,0,0,.8);
+    -moz-box-shadow: 3px 3px 19px rgba(0,0,0,.8);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#930), to(#6b3703), color-stop(0.5, #903000));    
+    background-image: -moz-linear-gradient(left top, left bottom, from(rgba(153,51,0,.3)), to(#6b3703), color-stop(0.5, #903000));
+    margin: 7px;
+    padding: 14px;
+}
+div.imgholder{
+    float: left;
+    background: url(img/AVATAR_01.jpg) no-repeat bottom right !important;
+    background: url(img/AVATAR_01.gif) no-repeat bottom right;
+    margin: 10px 7px 0 10px !important;
+    margin: 10px 0 0 5px;
+}
+div.imgholder div{
+    background: url(img/AVATAR_01.jpg) no-repeat;
+    padding: 0 6px 6px 0;
+}
+div.imgholder img{
+    display: block;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #666;
+    margin: -3px 5px 5px -3px;
+    padding: 2px;
+}
+blockquote{
+    width: 250px;
+}
+blockquote p{
+    background: url(ballontip.gif);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding-bottom: 28px;
+}
+blockquote p span{
+    display: block;
+    padding: 0.25em 0.25em 0.5em 0.5em;
+    border: 1pt solid black;
+    border-bottom-width: 0;
+    font-size: 3em;
+    font-family: "Comic Sans MS", Verdana, Helvetica, sans-serif;
+    line-height: 0.9em;
+}
+cite{
+    margin: 0;
+    padding: 0;
+    background-image: url(img/AVATAR_01.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    height: 386px;
+    text-align: right;
+    display: block;
+    width: 250px;
+}
+.no{
+    display: none;
+}
+div.slide {
+    width: 500px;
+    height: 468px;
+    background-image: url(face.jpg);
+    background-repeat: no-repeat;
+}
+.slide img {
+    width: 500px;
+    height: 468px;
+}
+img{
+    display: block;
+    float: left;
+    margin-right: 20px;
+    border: 10px solid #ccc;
+    padding: 2px;
+    background-color: #666;
+    /*-webkit-mask-box-image: url(mask.png);*/
+    -webkit-mask-box-image: -webkit-gradient(linear, left bottom, left top, 
+        from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+.center {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}

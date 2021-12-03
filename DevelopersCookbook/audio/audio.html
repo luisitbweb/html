@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Audio Elemento</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            audio{
+                display: block;
+                width: 90px;
+                height: 28px;
+            }
+            a{
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <audio controls="controls">
+                <source src="#" type="audio/mp3"/>
+                <source src="#" type="audio/ogg"/>
+
+                <script type="text/javascript" src="swfobject.js"></script>
+
+                <div id="mediaplayer"></div>
+
+                <script type="text/javascript">
+                    var so = new swfobject('player.swf', 'playerID', '480', '24', '9');
+                    so.addParam('allowfullscreen', 'true');
+                    so.addParam('allowscriptaccess', 'always');
+                    so.addVariable('file', 'music.mp3');
+                    so.write('mediaplayer');
+                </script>
+            </audio>
+        </div>
+        <p>Download the audio file: <a href="#">MP3 file, 3MB</a>; <a href="#">Ogg file, 3MB</a></p>
+    </body>
+</html>

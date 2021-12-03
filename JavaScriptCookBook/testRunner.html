@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Test Runner jsUnit</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            textarea{
+                resize: vertical;
+            }
+            input{
+                border: none;
+                -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, .4);
+                box-shadow: 0 1px 5px rgba(0, 0, 0, .4);
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+                cursor: pointer;
+                color: #fff;
+                font: bold 1.2em Arial, Helvetica, sans-serif;
+                margin: 0 10px 0 0;
+                padding: 10px 10px 10px 30px;
+                text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+            }
+            form fieldset legend p label em input{
+                margin-left: 140px;
+            }
+        </style>
+        <script type="text/javascript" src="Study.js"></script>
+        <script type="text/javascript">
+
+            function testConcatWithSpace() {
+                inform("Testing concatWithSpace");
+                assertEquals("Checking equality", "Shelley Powers", BBTest.concatWithSpace("Shelley", "Powers"));
+            }
+
+            function testDiscoverNumber() {
+                inform("Testing discoverNumber");
+                assertEquals("Checking valid params", 5, BBTest.discoverNumber("found5value", 5));
+            }
+
+            function testDivideNumbers() {
+                inform("Testing divideNumbers");
+                assertNaN("Checking numeric ops with no numbers", BBTest.divideNumbers("five", "2"));
+                assertNotEquals("Checking not equals", "5", BBTest.divideNumbers(10, 2));
+            }
+
+            function testAddAndRound() {
+                inform("Testing addAndRound");
+                assertNaN("Checking NaN", BBTest.addAndRound("four", "Three Quarter"));
+                assertEquals("Checking correct values", 6, BBTest.addAndRound(2.33, 3.45));
+            }
+
+            function sendData(evt) {
+                // cancel default form submittal
+                evt = evt || window.event;
+                evt.preventDefault();
+                evt.returnValue = false;
+
+                // get input data
+                var one = encodeURIComponent(document.getElementById("one").value).replace(/%20/g, '+');
+                var two = encodeURIComponent(document.getElementById("two").value).replace(/%20/g, '+');
+                var params = "one=" + one + "&two" + two;
+
+                // prep request
+                if (!http) {
+                    http = new XMLHttpRequest();
+                }
+                var url = "ajaxserver.php";
+                http.open("POST", url, true);
+
+                // set up Ajax headers
+                http.setRequestHeader("Content-Type",
+                        "application/x-www-form-urlencoded");
+                http.setRequestHeader("Content-length", params.length);
+                http.setRequestHeader("Connection", "close");
+
+                // callback function
+                http.onreadystatechange = precissResult;
+
+                // make Ajax call with params
+                http.send(params);
+            }
+
+            function processResult() {
+                if (http.readyState === 4 && http.status === 200) {
+                    document.getElementById("result").innerHTML = http.responseText;
+                } else {
+                    alert(http.statusText);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p>Running tests of test.js. View source to see tests.</p>
+
+        <form class="cmxform" id="commentForm" method="get" action="">
+            <fieldset>
+                <legend>A simple comment form with submit validation and default messages</legend>
+                <p>
+                    <label for="cname">Name</label>
+                    <em>*</em><input type="text" id="cname" name="name" size="25" class="required"/>
+                </p>
+
+                <p>
+                    <label for="cemail">E-Mail</label>
+                    <em>*</em><input type="email" id="cemail" name="email" size="25" class="required email" />
+                </p>
+
+                <p>
+                    <label for="curl">URL</label>
+                    <em>*</em><input type="url" id="curl" name="url" size="25" class="url" value=""/>
+                </p>
+
+                <p>
+                    <label for="ccomment">Your comment</label>
+                    <em>*</em><textarea id="ccomment" name="comment" cols="22" class="required"></textarea>
+                </p>
+
+                <p>
+                    <input class="submit" type="submit" value="Submit"/>
+                </p>
+            </fieldset>
+        </form>
+    </body>
+</html>

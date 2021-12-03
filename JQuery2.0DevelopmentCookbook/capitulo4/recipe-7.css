@@ -1,0 +1,91 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11/01/2019, 05:53:26
+    Author     : luis_
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+.gallery {
+    width: 600px;
+    margin: 50px auto auto auto;
+    position: relative;
+}
+.gallery .frame {
+    height: 450px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.gallery .frame img {
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.gallery .bottom {
+    overflow: hidden;
+}
+.gallery .thumbs {
+    height: 120px;
+    white-space: nowrap;
+    text-align: center;
+}
+.gallery .thumbs a {
+    display: inline-block;
+    opacity: 0.5;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+.gallery .thumbs a:hover {
+    opacity: 1.0;
+}
+.gallery .arrow {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    position: absolute;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    bottom: 35px;
+}
+.gallery .arrow.disabled {
+    background-color: #252525;
+}
+.gallery .left-arrow {
+    left: -60px;
+}
+.gallery .right-arrow {
+    right: -60px;
+}
+.gallery .arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 12px solid #1a1a1a;
+    position: absolute;
+    right: 16px;
+    top: 13px;
+}
+.gallery .arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-right:12px solid #1a1a1a;
+    position: absolute;
+    right: 21px;
+    top: 13px;
+}

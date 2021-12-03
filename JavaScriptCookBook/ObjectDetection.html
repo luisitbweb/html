@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Object detection</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style type="text/css">
+            div{
+                width: 50%;
+                height: 21px;
+                padding: 10px;
+                margin: 10px 0;
+                text-align: center;
+            }
+            #div1{
+                background-color: #ffff00;
+            }
+            .divclass{
+                background-color: #ccffcc;
+            }
+        </style>
+
+        <script type="text/javascript">
+            window.onload = function () {
+                document.getElementById('div1').onclick = addDiv;
+            };
+            function addDiv() {
+                // get parent
+                var parent = this.parentNode;
+
+                // create new div
+                var newDiv = document.createElement('div');
+                newDiv.className = 'divclass';
+                newDiv.innerHTML = '<P> eu estou aqui, eu estou na página! </p>';
+
+                // add to page
+                parent.insertBefore(newDiv, this);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="div1">
+            <p>Click me to add new element</p>
+        </div>
+    </body>
+</html>

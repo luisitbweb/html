@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html dir="ltr" lang="pt-BR">
+    <head>
+        <title>7_8 Custom Video Controls</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            body{
+                font: bold .8em Arial, Helvetica, sans-serif;
+            }
+            video{
+                display: block;
+            }
+            #video-wrapper{
+                -moz-box-shadow: 0 0 20px rgba(0, 0, 0, .8);
+                -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .8);
+                box-shadow: 0 0 20px rgba(0, 0, 0, .8);
+                display: block;
+                margin: 20px auto;
+                overflow: hidden;
+                position: relative;
+                width: 568px;
+            }
+            #controls{
+                background: rgba(0, 0, 0, .3);
+                bottom: 0;
+                height: 30px;
+                left: 0;
+                padding: 35px 10px 10px;
+                position: absolute;
+                width: 548px;
+                z-index: 1;
+            }
+            button{
+                background: rgba(255, 255, 255, .7);
+                border: none;
+                -moz-border-radius: 15px;
+                -webkit-border-radius: 15px;
+                border-radius: 15px;
+                cursor: pointer;
+                padding: 5px;
+            }
+            #play{
+                width: 70px;
+            }
+            #time, #duration{
+                color: #fff;
+                position: absolute;
+                top: 0;
+            }
+            #time{
+                left: 10px;
+            }
+            #duration{
+                right: 10px;
+                text-align: right;
+            }
+            input[type='range']{
+                position: absolute;
+            }
+            #seekbar{
+                top: 8px;
+                width: 465px;
+                left: 50px;
+            }
+            #volume{
+                width: 50px;
+            }
+            #mute{
+                float: right;
+                width: 60px;
+            }
+            label[for='volume']{
+                color: #fff;
+                float: right;
+                margin: 5px 55px 0 15px;
+            }
+            button.speed{
+                font-size: .8em;
+            }
+        </style>
+
+        <script>
+            var video = null;
+            var seekbar = null;
+            var playBtn = null;
+
+            // initialize the page
+            function init() {
+                // get video container
+                video = document.getElementsByName('video')[0];
+
+                // reference the range inputs
+                seekbar = document.getElementById('seekbar');
+                volume = document.getElementById('volume');
+
+                // set bar range chage handlers
+                seekbar.addEventListener('change', seek, false);
+                volume.addEventListener('change', changeVolume, false);
+
+                // reference the buttons
+                playBtn = document.getElementById('play');
+                muteBtn = document.getElementById('mute');
+                rewindBtn = document.getElementById('rewind');
+                ffBtn = document.getElementById('ff');
+                fullscrenBtn = document.getElementById('fullscreen');
+
+                // set button click handlers
+                playBtn.addEventListener('click', playPause, false);
+                muteBtn.addEventListener('click', mute, false);
+                rewindBtn.addEventListener('click', rewind, false);
+                ffBtn.addEventListener('click', fastforward, false);
+                fullscreenBtn.addEventListener('click', fullscreen, false);
+
+                // remove default browser controls
+                video.removeAttribute('controls');
+
+                // initialize the video player information
+                if (video.redystate > 0) {
+                    var durationText = document.getElementById('duration');
+                    durationText.innerHTML = (formatTime(video.duration));
+
+                    var durationRounded = Math.round(video.duration);
+                    seekbar.setAttribute('max', durationRounded);
+
+                    playBtn.disabled = false;
+                    seekbar.value = 0;
+                }
+                // listner event while the video is playing
+                video.addEventListener('timeupdate', function () {
+                    var currentTime = document.getElementById('time');
+                    currentTime.innerHTML = formatTime(video.currentTime);
+                    seekbar.value = video.currentTime;
+                }, false);
+
+                video.addEventListener('ratechange', function () {
+                    // you could alternatively display the current playback speed
+                    // console.log (video.playbackRate);
+                }, false);
+
+                video.addEventListener('play', function () {
+                    playBtn.innerHTML = 'Pause';
+                }, false);
+
+                video.addEventListener('pause', function () {
+                    playBtn.innerHTML = 'play';
+                }, false);
+
+                // detects when the video has finished
+                video.addEventListener('ended', function () {
+                    playBtn.innerHTML = 'Play again';
+                }, false);
+            }
+            function playPause() {
+                if (ifPlaying()) {
+                    video.pause();
+                    playBtn.innerHTML = 'Play';
+                } else {
+                    video.play();
+                    playBtn.innerHTML = 'Pause';
+                }
+            }
+            ;
+
+            // toggle the mute status of the video
+            function mute() {
+                var muteBtn = document.getElementById('mute');
+                if (!video.muted) {
+                    video.muted = true;
+                    muteBtn.innerHTML = 'Un-mute';
+                } else {
+                    video.muted = false;
+                    muteBtn.innerHTML = 'Mute';
+                }
+            }
+
+            // change the volume
+            function changeVolume() {
+                video.volume = volume.value;
+            }
+
+            // seekbar controls
+            function seek() {
+                video.currentTime = seekbar.value;
+            }
+
+            // fast-forward the video
+            function fastforward() {
+                video.playbackRate = video.playbackRate + 2;
+            }
+
+            // rewind the video
+            function rewind() {
+                video.playbackRate = video.playbackRate - 2;
+            }
+
+            // go fullscreen webkit only
+            function fullscreen() {
+                video.webkitEnterFullscreen();
+            }
+
+            // check if video is playing or not
+            function ifPlaying() {
+                if (video.paused || video.ended) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+            ;
+
+            // format the time to something nice and readable
+            function formatTime(seconds) {
+                seconds = Math.round(seconds);
+                minutes = Math.floor(seconds / 60);
+                minutes = (minutes >= 10) ? minutes : '0' + minutes;
+                seconds = Math.floor(seconds % 60);
+                seconds = (seconds >= 10) ? seconds : '0' + seconds;
+                return minutes + ': ' + seconds;
+            }
+
+            // initialize the page when loaded
+            window.addEventListener('load', init, false);
+        </script>
+    </head>
+
+    <body>
+        <div id="video-wrapper">
+
+            <div id="controls">
+                <button id="play">Play</button>
+                <p id="time">0:00</p>
+                <p id="duration">0:00</p>
+                <label for="volume"> Vol:<input id="volume" name="volume" type="range" min="0" max="1" step="0.1" /></label>
+                <button id="mute">Mute</button>
+                <input id="seekbar" name="seekbar" type="range" min="0" max="1" step="0.1" />
+                <button id="rewind" class="speed">Rewind</button>
+                <button id="ff" class="speed">Fast-forward</button>
+                <button id="fullscreen">Fullscreen</button>
+            </div>
+
+            <video width="568" height="320">
+                <!-- video for Safari and IE9. MP4 must be first for iPad -->
+                <source src="Nico_Vinz.mp4" type="video/mp4" />
+                <!-- video for Chrome, Firefox and Opera -->
+                <source src="cablecar.webm" type="video/webm" />
+                <source src="cablecar.ogv" type="video/ogg" />
+            </video>
+        </div>
+    </body>
+</html>

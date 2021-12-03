@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Placing a Border Around the Browser’s Viewport</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="PlacingBorderAroundBrowserViewport.css"/>
+        <style type="text/css">
+            hr{
+                border: 0;
+                height: 43px;
+                background-image: url(hr.gif);
+                background-position: 50% 0;
+                background-repeat: no-repeat;
+                margin: .66em 0;
+            }
+            #prevLink, #nextLink {
+                width: 49%;
+                height: 100%;
+                /* Trick IE into showing hover */
+                background: transparent url(/_assets/img/blank.gif) no-repeat;
+                display: block;
+            }
+            #prevLink:hover, #prevLink:visited:hover {
+                background: url(/_assets/img/prevlabel.gif) left 15% no-repeat;
+            }
+            #nextLink:hover, #nextLink:visited:hover {
+                background: url(/_assets/img/nextlabel.gif) right 15% no-repeat;
+            }
+        </style>
+
+        <!-- Structure for Lightbox effect -->
+        <script type="text/javascript" src="/_assets/js/prototype.js"></script>
+        <script type="text/javascript" src="/_assets/js/scriptaculous.js?load=effects"></script>
+
+        <!-- Script for Lightbox -->
+        <script type="text/javascript" src="/_assets/js/lightbox.js"></script>
+        <link rel="stylesheet" href="/_assets/js/lightbox.css" type="text/css" media="screen"/>
+
+        <!--[if lt IE 8]>
+            <style type="text/css">
+                hr{
+                    display: list-item;
+                    list-style: url(hr.gif) inside;
+                    filter: alpha(opacity=0);
+                    width: 0;
+                }
+            </style>
+        <![endif]-->
+
+    </head>
+    <body>
+        <div id="top"></div>
+        <div id="topright"></div>
+        <div id="right"></div>
+        <div id="bottomright"></div>
+        <div id="bottom"></div>
+        <div id="bottomleft"></div>
+        <div id="left"></div>
+        <div id="topleft"></div>
+
+        <ul>
+            <li>
+                <a href="trammell_shoes.jpg" rel="lightbox[austin]" 
+                   title="Trammell shows off his happy shoes.">
+                    <img src="trammell_shoes_tn.jpg" 
+                         alt="Mark Trammel is happy with his shoes." />
+                </a>
+            </li>
+            <li>
+                <a href="molly_andy.jpg" rel="lightbox[austin]" 
+                   title="Molly and Andy pose for a shot.">
+                    <img src="molly_andy_tn.jpg" 
+                         alt="Molly and Andy pose for a shot." />
+                </a>
+            </li>
+            <li>
+                <a href="msjen.jpg" rel="lightbox[austin]" 
+                   title="Ms. Jen at breakfast.">
+                    <img src="msjen_tn.jpg" alt="Ms. Jen at breakfast." />
+                </a>
+            </li>
+            <li>
+                <a href="trammell_shoes.jpg" rel="lightbox" 
+                   title="Trammmell shows off his happy shoes.">
+                    <img src="trammell_shoes_tn.jpg" 
+                         alt="Mark Trammell is happy with his shoes."/>
+                </a>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,290 @@
+@media screen and (max-width: 1200px) {
+	/* GERAL */
+	#website {
+		width: 100%;
+		min-width: 305px;
+	}
+
+	.conteudo_padrao {
+		width: 96%;
+	}
+	
+	/* LOGO */
+	#logo{
+		left: 0;
+	}
+
+	/* MENU */
+	#menu{
+		margin-right: 0;
+	}
+
+	#menu > ul > li {
+		margin-left: 10px;
+		padding: 0;
+	}
+
+	/* DESTAQUE HOME */
+	#destaque_home, #destaque_home ul li{
+		height: auto;
+	}
+
+	#destaque_home ul li h2{
+		margin-top: 70px;
+	}
+
+	#destaque_home ul li p {
+		margin-bottom: 70px;
+	}
+
+	/* CONTEÚDO SITE */
+	#corpo img{
+		max-width: 90%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	/* TOPO */
+	#topo{
+		height: 140px;
+		z-index: 99999;
+	}
+
+	#topo .conteudo_padrao{
+		width: 100%;
+		height: 100%;
+	}
+
+	/* LOGO */
+	#logo{
+		float: none;
+		position: absolute;
+		top: 15px;
+		left: 50%;
+		margin-left: -125px;
+	}
+
+	/* MENU */
+	#menu {
+		display:none;
+	}
+
+	/* MENU RESPONSIVO */
+	.slicknav_menu {
+		display:block;
+		position: relative;
+		top: 93px;
+	}
+
+	/* DESTAQUE HOME */
+	#destaque_home ul li h2{
+		float: left;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		font-size: 20px;
+		padding: 5px 10px;
+		background: rgba(0,0,0,0.6);
+		-webkit-border-radius: 12px;
+		-moz-border-radius: 12px;
+		border-radius: 12px;
+	}
+
+	#destaque_home ul li p {
+		display: none;
+	}
+	
+	/* VANTAGENS */
+	#vantagens_home ul{
+		margin-top: 0;
+	}
+
+	#vantagens_home ul li{
+		margin: 25px 0;
+		width: 48%;
+	}
+
+	#vantagens_home ul li:nth-child(2n+0) {
+		margin-right: 0;
+	}
+
+	#vantagens_home ul li:nth-child(2n+1) {
+		clear: left;
+	}
+	
+	/* FUNCIONALIDADES */
+	#funcionalidades_home ul{
+		width: 300px;
+		margin: 0 auto;
+	}
+
+	#funcionalidades_home ul li{
+		clear: left;
+		width: 100%;
+		margin: 25px 0;
+	}
+	
+	/* CADASTRE-SE */
+	#cadastre_se_home .link_botao{
+		position: relative;
+	}
+	
+	/* CONTEÚDO SITE */
+	#corpo .subtitulo_site{
+		font-size: 18px;
+	}
+	
+	/* LINHA DO TEMPO */
+	#lista_timeline {
+		background-position: top right;
+	}
+
+	#lista_timeline li>span {
+		left: auto;
+		margin-left: 0;
+		right: 11px;
+	}
+
+	.img_timeline{
+		display: none;
+	}
+
+	.texto_timeline {
+		float: left!important;
+		width: 80%;
+		width: -webkit-calc(100% - 140px);
+		width: -moz-calc(100% - 140px);
+		width: calc(100% - 140px);
+		margin-left: 35px;
+	}
+
+	.texto_timeline .seta {
+		left: auto!important;
+		right: -15px!important;
+		background-position: 0px 0px!important;
+	}
+
+	#corpo .texto_timeline > img {
+		display: block;
+		width: 100%;
+		max-width: 560px;
+		margin: 0 auto 25px;
+	}
+
+	/* NOSSOS SERVIÇOS */
+	#lista_servicos li{
+		width: 47%;
+	}
+
+	#lista_servicos li:nth-child(2n){
+		margin-right: 0;
+	}
+
+	#lista_servicos li:nth-child(2n+1) {
+		clear: left;
+	}
+	
+	/* SERVIÇOS ONLINE */
+	#servicos_online{
+		width: 450px;
+	}
+
+	#servicos_online th:nth-child(3), #servicos_online td:nth-child(3){
+		display: none;
+	}
+	
+	/* FORMULÁRIO CONTATO */
+	.infos_end, #mapa_contato{
+		width: 100%;
+	}
+
+	/* FORMULÁRIO CADASTRO */
+	.normal_1, .normal_2{
+		width: 50%;
+	}
+
+	.normal_3, .normal_4, .normal_5, .normal_6{
+		width: 100%;
+	}
+
+	.form_padrao fieldset{
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	/* DESTAQUE HOME */
+	#destaque_home ul li h2{
+		font-size: 15px;
+	}
+
+	.titulo_home{
+		font-size: 24px;
+	}
+
+	.subtitulo_home{
+		font-size: 14px;
+	}
+
+	/* VANTAGENS */
+	#vantagens_home ul{
+		width: 300px;
+		margin: 0 auto;
+	}
+
+	#vantagens_home ul li{
+		clear: left;
+		width: 100%;
+		margin: 25px 0;
+	}
+	
+	/* CADASTRE-SE */
+	#cadastre_se_home h2{
+		font-size: 18px;
+	}
+
+	/* CONTEÚDO SITE */
+	#corpo img{
+		max-width: 100%;
+	}
+	
+	/* LINHA DO TEMPO */
+	.texto_timeline {
+		width: 80%;
+		width: -webkit-calc(100% - 90px);
+		width: -moz-calc(100% - 90px);
+		width: calc(100% - 90px);
+		margin-left: 10px;
+	}
+
+	#corpo .ano_timeline {
+		font-size: 25px;
+		line-height: 25px;
+		margin-bottom: 15px;
+	}
+
+	/* NOSSOS SERVIÇOS */
+	#lista_servicos li{
+		width: 100%;
+		margin-right: 0;
+		clear: left;
+	}
+
+	/* SERVIÇOS ONLINE */
+	#servicos_online{
+		width: 300px;
+	}
+
+	#servicos_online th:nth-child(1), #servicos_online td:nth-child(1){
+		display: none;
+	}
+	
+	/* FORMULÁRIO CONTATO */
+	#mapa_contato{
+		display: none;
+	}
+
+	/* FORMULÁRIO CADASTRO */
+	.normal_1, .normal_2, .normal_3, .normal_4, .normal_5, .normal_6{
+		width: 100%;
+	}
+}

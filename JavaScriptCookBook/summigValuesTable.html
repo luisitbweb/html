@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Sum table Column</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style type="text/css">
+            table, th{
+                border: 1px solid;
+                border-collapse: collapse;
+            }
+            tr, td{
+                border: 1px solid;
+                border-collapse: collapse;
+
+            }
+        </style>
+
+        <script type="text/javascript" src="summigValuesTable.js"></script>
+        <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            window.onload = function () {
+                var table = document.querySelector('table');
+                table.onclick = sum;
+            };
+            function sum1() {
+                var rows = document.getElementById('sumtable').getElementsByTagName('tr');
+                var sum = 0;
+
+                // start with one to skip first row, which is col headers
+                for (var i = 1; i < rows.length; i++) {
+                    sum += parseFloat(rows[i].childNodes[2].firstChild.data);
+                }
+                alert(sum1);
+            }
+            //]]>
+        </script>
+    </head>
+    <body>
+        <div>
+            <p><button onclick="sum();">teste</button></p>
+            <table id="sumtable">
+                <tr><th>Value 1</th><th>Value 2</th><th>Value 3</th><th>Value 4</th>
+                </tr>
+                <tr><td>--</td><td>**</td><td>5.0</td><td>nn</td></tr>
+                <tr><td>18.53</td><td>9.77</td><td>3.00</td><td>153.88</td></tr>
+                <tr><td>Alaska</td><td>Montana</td><td>18.33</td><td>Missouri</td>
+                </tr>
+            </table>
+        </div>
+        <div id="target"></div>
+        <script type="text/javascript">
+            var div = document.getElementById("target");
+            div.innerHTML = "<p>This is a paragraph</p><p>This is a second</p>";
+        </script>
+    </body>
+</html>

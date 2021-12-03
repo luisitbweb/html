@@ -1,0 +1,48 @@
+/* 
+    Created on : 09/02/2019, 05:23:59
+    Author     : luis_
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Leckerli+One);
+@import url(http://fonts.googleapis.com/css?family=Happy+Monkey);
+
+body{
+    background-color: #333333;
+    font-family: 'Happy Monkey', cursive;
+}
+h1{
+    font-family: 'Leckerli One', cursive;
+    font-size: 60px;
+    line-height: 80px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: #333;
+}
+.frame{
+    width: 500px;
+    margin: 50px auto auto auto;
+    height: 300px;
+    background-color: #FFF;
+    box-shadow: #000 3px 3px 2px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+.frame p{
+    font-size: 18px;
+    line-height: 25px;
+}
+.frame form .email-input{
+    height: 40px;
+    font-size: 30px;
+    width: 400px;
+    font-family: 'Happy Monkey', cursive;
+}
+.frame form .blinker{
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: 'Happy Monkey', cursive;
+}

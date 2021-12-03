@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>adjusting the scroll bar of the browser viewport</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            html .highlight, body .highlight {
+                -webkit-scrollbar-face-color: #99ccff;
+                -webkit-scrollbar-shadow-color: #ccccff;
+                -webkit-scrollbar-highlight-color: #ccccff;
+                -webkit-scrollbar-3dlight-color: #99ccff;
+                -webkit-scrollbar-darkshadow-color: #ccccff;
+                -webkit-scrollbar-track-color: #ccccff;
+                -webkit-scrollbar-arrow-color: #000033;
+                -moz-scrollbar-face-color: #99ccff;
+                -moz-scrollbar-shadow-color: #ccccff;
+                -moz-scrollbar-highlight-color: #ccccff;
+                -moz-scrollbar-3dlight-color: #99ccff;
+                -moz-scrollbar-darkshadow-color: #ccccff;
+                -moz-scrollbar-track-color: #ccccff;
+                -moz-scrollbar-arrow-color: #000033;
+                -ms-scrollbar-face-color: #99ccff;
+                -ms-scrollbar-shadow-color: #ccccff;
+                -ms-scrollbar-highlight-color: #ccccff;
+                -ms-scrollbar-3dlight-color: #99ccff;
+                -ms-scrollbar-darkshadow-color: #ccccff;
+                -ms-scrollbar-track-color: #ccccff;
+                -ms-scrollbar-arrow-color: #000033;
+                -o-scrollbar-face-color: #99ccff;
+                -o-scrollbar-shadow-color: #ccccff;
+                -o-scrollbar-highlight-color: #ccccff;
+                -o-scrollbar-3dlight-color: #99ccff;
+                -o-scrollbar-darkshadow-color: #ccccff;
+                -o-scrollbar-track-color: #ccccff;
+                -o-scrollbar-arrow-color: #000033;
+                scrollbar-face-color: #99ccff;
+                scrollbar-shadow-color: #ccccff;
+                scrollbar-highlight-color: #ccccff;
+                scrollbar-3dlight-color: #99ccff;
+                scrollbar-darkshadow-color: #ccccff;
+                scrollbar-track-color: #ccccff;
+                scrollbar-arrow-color: #000033;
+            }
+            h1,h2,h3{
+                /*text-align: center;*/
+                margin-left: auto;
+                margin-right: auto;
+                width: 300px;
+            }
+            .center{
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .flagicon{
+                text-align: center;
+            }
+            .flagjpg{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -96px;
+                margin-left: -138px;
+                height: 192px;
+                width: 256px;
+            }
+            #centerFrame {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                /* adjust negative value until content is centered */
+                margin-top: -150px;
+                margin-left: -138px;
+                width: 256px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="">
+            <textarea name="scrollbar" id="scrollbar" cols="30" rows="10" class="highlight"></textarea>
+        </form>
+    </body>
+
+    <h1>Lorem ipsum dolor</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, et.</p>
+    <h2>Lorem ipsum dolor</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, et.</p>
+    <h3>Lorem ipsum dolor</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, et.</p>
+
+    <div class="center">
+        <table>
+            <tr>
+                <td>This is the first cell</td>
+                <td>This is the second cell</td>
+            </tr>
+            <tr>
+                <td>This is the third cell, it's under the first cell</td>
+                <td>This is the fourth cell, it's under the second cell.</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="flagicon"><img src="img/flag.gif" alt="" width="160"></div>
+    <!--<div class="flagjpg"><img src="img/AVATAR_01.jpg" alt=""></div>-->
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>7_7 Video Subtitles</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="http://ajax.googleapis.com/ajax/ligs/jquery/1.4.4/jquery.min.js"></script>
+        <script src="jquery.videosub.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $('video').videoSub({
+                    containerClass: 'videosub-container',
+                    barClass: 'videosub-bar',
+                    useBarDefalutStyle: false
+                });
+
+                $('.videosub-container').append('<a title="show/hide video subtitles" id="subtitlestoggle" href="#">Show subtitles</a>');
+
+                $('.videosub-bar').hide();
+
+                $('#subtitlestoggle').click(function () {
+                    $(this).text($(this).text() == 'Show subtitles' ? 'Hide subtitles' : 'Show subtitles');
+                    $('.videosub-bar').toggle();
+                });
+            });
+        </script>
+
+        <style type="text/css">
+            body {
+                font-family: arial, Arial, Helvetica, sans-serif;
+            }
+            .videosub-container {
+                width: 640px;
+            }
+            .videosub-bar {
+                background: black;
+                bottom: 40px;
+                color: yellow;
+                font-size: 1.3em;
+                font-weight: bold;
+                padding: 10px 20px;
+                position: absolute;
+                text-align: center;
+                width: 560px;
+            }
+            a#subtitlestoggle {
+                background: black;
+                color: yellow;
+                display: block;
+                font-weight: bold;
+                padding: 10px;
+                position: absolute;
+                right: 0;
+                text-decoration: none;
+                top: 0;
+            }
+            a#subtitlestoggle:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <video width="640" height="480" controls="controls">
+            <!-- video for safari and IE9 MP4 must be first for ipad -->
+            <source src="video.mp4" type="video/mp4"/>
+
+            <!-- video for chrome, firefox and opera -->
+            <source src="video.webm" type="video/webm"/>
+            <source src="video.ogv" type="video/ogg"/>
+
+            <track src="subtitles.vtt" kind="subtitles" srclang="pt-br" label="Brasil">
+            <!-- fallback for rubbish browsers youtube etc -->
+        </video>
+
+        <p>Download the video: <a href="video.mp4">MP4 file, 3MB</a>; <a
+                href="video.webm">webM file, 3MB</a>; <a href="video.ogv">Ogg file, 3MB</a></p>
+
+        <p>Download the subtitles: <a href="subtitles.vtt">VTT file, 1 KB</a>; 
+            <a href="subtitles.txt">plain-text file, 1 KB</a></p>
+
+        <p><b>This is</b> the <i>first bit</i> of the <u>subtitles</u></p>
+    </body>
+</html>

@@ -1,0 +1,386 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28/04/2015, 13:05:34
+    Author     : Luís Carlos
+*/
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300italic);
+
+#fonte{
+    font-family: 'Open Sans Condensed';
+    font-stretch: semi-condensed;
+    font-style: oblique;
+    font-weight: bolder;
+    font-size: 15px;
+    font-size-adjust: 0.58;
+}
+body {
+    counter-reset: section;
+}
+
+h1 {
+    counter-reset: subsection;
+}
+
+h4:before {
+    counter-increment: section;
+    content: "Section " counter(section) ". ";
+}
+
+h2:before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) " ";
+}
+.droptarget {
+    float: left; 
+    width: 100px; 
+    height: 35px;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+p{
+    text-indent: 10px;
+    font: italic bold 12px sans-serif;
+    font-size-adjust: 0.58;
+}
+#fuc{
+    background: yellow;
+    border: 1px solid black;
+    padding: 10px;
+    width: 500px;
+    height: 50px;
+}
+caption{
+    caption-side: bottom;
+}
+img#olho{
+    border-radius: 10px 20px;
+    border: 10px double #a3a3a3;
+    margin-top: 50px;
+    margin-left: 700px;
+    width: 150px;
+    height: 150px;
+}
+pre{
+    font-stretch: expanded;
+    font-style: oblique;
+    font-synthesis: weight;
+    font-variant: small-caps;
+    font-weight: bolder;
+    direction: ltr;
+    text-orientation: sideways-right;
+}
+table{
+    border-collapse: separate;
+    border-spacing: 10px;
+    empty-cells: hide; 
+    table-layout: fixed;
+}
+#abc{
+    width: 350px;
+    height: 100px;
+    border: 1px solid #c3c3c3;
+    display: -webkit-flex;
+    display: flex;
+}
+#abc div:nth-of-type(1){flex-grow: 1;}
+#abc div:nth-of-type(2){flex-grow: 3;}
+#abc div:nth-of-type(3){flex-grow: 1;}
+#abc div:nth-of-type(4){flex-grow: 1;}
+#abc div:nth-of-type(5){flex-grow: 1;}
+
+#abc div:nth-of-type(1){-webkit-flex-grow: 1;}
+#abc div:nth-of-type(2){-webkit-flex-grow: 3;}
+#abc div:nth-of-type(3){-webkit-flex-grow: 1;}
+#abc div:nth-of-type(4){-webkit-flex-grow: 1;}
+#abc div:nth-of-type(5){-webkit-flex-grow: 2;}
+
+#ab{
+    width: 350px;
+    height: 100px;
+    border: 1px solid #c3c3c3;
+    display: -webkit-flex;
+    display: flex;
+}
+
+#ab div {
+    -webkit-flex-grow: 1; /* Safari 6.1+ */
+    -webkit-flex-shrink: 1; /* Safari 6.1+ */
+    -webkit-flex-basis: 100px; /* Safari 6.1+ */
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100px;
+}
+
+#ab div:nth-of-type(2) {
+    -webkit-flex-shrink: 3; /* Safari 6.1+ */
+    flex-shrink: 3;
+}
+
+#abcg{
+    width: 175px;
+    height: 120px;
+    border: 1px solid #c3c3c3;
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#abcg div{
+    width: 50px;
+    height: 50px;
+}
+
+#abd{
+    width: 400px;
+    height: 100px;
+    border: 1px solid #c3c3c3;
+    display: -webkit-flex;
+    -webkit-justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
+}
+
+#abd div{
+    width: 70px;
+    height: 70px;
+}
+
+.teste{
+    color: blue;
+}
+#teste{
+    border: 1px solid #c3c3c3;
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-flow: row-reverse wrap; /* Safari 6.1+ */
+    display: flex;
+    flex-flow: row-reverse wrap;
+}
+body{
+    background-image: url("_imagens/w3schools.jpg");
+    background-size: 100px 150px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right center;
+    background-clip: border-box;
+    background-origin: content-box; 
+}
+h1{
+    color: #ffffff;
+    background: #3300ff;
+    width: 385px;
+}
+h2{
+    opacity: 0.5;
+    color: #333333;
+    width: 160px;
+    border-style: dotted;
+    border-radius: 5px 2px;
+}
+footer{
+    text-align: center;
+    font-style: italic;
+    color: #ffffff;
+    background-color: #6600cc;
+}
+table, th, td{
+    border: 1px dotted #9999ff;
+}
+td{
+    text-align: center;
+}
+table{
+    border-radius: 5px;
+}
+#avatar{
+    width: 150px;
+    height: 200px;
+    border: thin solid black;
+    overflow-x: scroll;
+    padding: auto 10px;
+}
+#main{
+    width: 70px;
+    height: 300px;
+    border: 1px solid #c3c3c3;
+    display: -webkit-flex;
+    -webkit-flex-flow: row wrap;
+    -webkit-align-content: space-around;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+}
+#main div{
+    width: 70px;
+    height: 70px;
+}
+
+#div1{
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+td, th{
+    text-decoration: line-through;
+    text-decoration-color: #6600cc;
+    text-decoration-line: overline;
+    text-decoration-style: dotted;
+    text-shadow: 2px 2px 4px #000000;
+    text-underline-position: alphabetic;
+    color: white;
+}
+#anima{
+    width: 120px;
+    height: 80px;
+    background: red;
+    position: relative;
+    -webkit-animation: mymove 5s infinite;
+    animation: mymove 5s infinite;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+}
+@-webkit-keyframes mymove{
+    from{left: 0px;}
+    to{left: 200px;}
+}
+@keyframes mymove{
+    from{left: 0px;}
+    to{left: 200px;}
+}
+/*
+@-webkit-keyframes mymove{
+    0%{top: 0px; left: 0px; background: red;}
+    25%{top:0px; left: 100px; background: yellow;}
+    50%{top: 100px; left: 100px; background: blue;}
+    75%{top: 100px; left: 0px; background: green;}
+    100%{top: 0px; left: 0px; background: red;}
+}
+@keyframes mymove{
+    0%{top: 0px; left: 0px; background: red;}
+    25%{top: 0px; left: 100px; background: blue;}
+    50%{top: 100px; left: 100px; background: yellow;}
+    75%{top: 100px; left: 0px; background: green;}
+    100%{top: 0px; left: 0px; background: red;}
+}
+@-webkit-keyframes mymove{
+    0%{top: 0px; background: red; width: 100px;}
+    100%{top: 200px; background: yellow; width: 300px;}
+}
+@keyframes mymove{
+    0%{top: 0px; background: yellow; width: 100px;}
+    100%{top: 200px; background: red; width: 300px;}
+}
+@-webkit-keyframes mymove{
+    0%{top: 0px;}
+    25%{top: 200px;}
+    75%{top: 50px;}
+    100%{top: 100px;}
+}
+@keyframes mymove{
+    0%{top: 0px;}
+    25%{top: 200px;}
+    75%{top: 50px;}
+    100%{top: 100px;}
+}
+*/
+#can{
+    width: 200px;
+    height: 277px;
+    border: 1px solid #d3d3d3;
+}
+.mundo{
+    text-align: center;
+    padding: 25px;
+}
+.ola{
+    width: 110px;
+    height: 100px;
+    background: red;
+    margin-bottom: 15px;
+    color: white;
+    -webkit-animation: ola 2s infinite linear alternate;
+    -webkit-transition-property: width, height;
+    animation: ola 2s infinite linear alternate;
+    transition: width 2s;
+}
+.ola:hover{
+    width: 300px;
+    height: 300px;
+}
+@-webkit-keyframes ola{
+    to{-webkit-transform: rotateY(180deg);}
+}
+@keyframes ola{
+    to{transform: rotateY(180deg);}
+}
+#tab{
+    width: 300px;
+    height: 100px;  
+}
+div.container{
+    width: 30em;
+    border: 1em solid;
+}
+div.box{
+    box-sizing: border-box;
+    width: 50%;
+    border: 1em solid red;
+    float: left;
+}
+a#contra:before{
+    content: "("attr(href)")";
+}
+button{
+    position: absolute;
+}
+button#b1{
+    top: 20%;
+    left: 25%;
+    nav-index: 1;
+    nav-right: #b2;
+    nav-left: #b4;
+    nav-down: #b2;
+    nav-up: #b4;
+}
+button#b2{
+    top: 40%;
+    left: 50%;
+    nav-index: 2;
+    nav-right: #b3;
+    nav-left: #b1;
+    nav-down: #b2;
+    nav-up: #b1;
+}
+button#b3{
+    top: 70%;
+    left: 25%;
+    nav-index: 3;
+    nav-right: #b4;
+    nav-left: #b2;
+    nav-down: #b4;
+    nav-up: #b2;
+}
+button#b4{
+    top: 40%;
+    left: 0%;
+    nav-index: 4;
+    nav-right: #b1;
+    nav-left: #b3;
+    nav-down: #b1;
+    nav-up: #b3;
+}
+#sexo{
+    width: 280px;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Todo sobre google glass</title>
+        <link rel="stylesheet"  href="_css/estilo.css"/>
+        <link rel="stylesheet"  href="_css/form.css"/>
+        <script src="_javascript/funcoes.js"></script>
+        <script>
+            function calc_total() {
+                var qtd = parseInt(document.getElementById('cqtd').value);
+                tot = qtd * 1500;
+                document.getElementById('ctot').value = tot;
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="interface">
+            <header id="cabecalho">
+                <hgroup>
+                    <h1>Google Glass</h1>
+                    <h2>A revolução do Google está chegando</h2>
+                </hgroup>
+
+                <img alt="contato" id="icone" src="_imagens/contato.png"/>
+
+                <nav id="menu">
+                    <h1>Menu Principal</h1>
+                    <ul type="disc">
+                        <li onmousemove="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html"> Home</a></li>
+                        <li onmousemove="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+                        <li onmousemove="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+                        <li onmousemove="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+                        <li onmousemove="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section id="corpo-full">
+                <article id="noticia-principal">
+                    <header id="cabecalho-artigo">
+                        <hgroup>
+                            <h3>Fale Conosco > Contato</h3>
+                            <h1>Formulário de Contato</h1>
+                            <h2>Por Luís Carlos Da Silva Santos</h2>
+                            <h3 class="direita">Atualizado em 21/Março/2015</h3>
+                        </hgroup>
+                    </header>
+                    <form method="POST" id="fcontato" action="mailto:lusitb@ig.com.br" oninput="calc_total();">
+                        <fieldset id="usuario">
+                            <legend>Identificação do Usuário</legend>
+                            <p><label for="cnome">Nome:</label><input type="text" name="tnome" id="cnome" size="30" maxlength="40" placeholder="Nome Completo" autofocus="autofocus"/></p>
+                            <p><label for="csenha">Senha:</label><input type="password" name="tsenha" id="csenha" size="12" maxlength="8" placeholder="De: 6 a 8 Digitos"/></p>
+                            <p><label for="cmail">E-mail:</label><input type="email" name="tmail" id="cmail" size="20" maxlength="40"/></p>
+                            <fieldset id="sexo">
+                                <legend>Sexo:</legend>
+                                <input type="radio" name="tsexo" id="cmasc" checked/><label for="cmasc">Masculino</label><br />
+                                <input type="radio" name="tsexo" id="cfem"/><label for="cfem">Feminino</label>
+                            </fieldset>
+                            <p><label for="cnasc">Data de Nascimento:</label><input type="date" name="tnasc" id="cnasc"/></p>
+                        </fieldset>
+
+                        <fieldset id="endereco">
+                            <legend>Endereço do Usuário</legend>
+                            <p><label for="crua">Logradouro:</label><input type="text" name="trua" id="crua" size="13" maxlength="80" placeholder="Rua, Av, Trav, ..."/></p>
+                            <p><label for="cnum">Número:</label><input type="number" name="tnum" id="cnum" min="0" max="9999"/></p>
+                            <p><label for="cest">Estado:</label>
+                                <select name="test" id="cest">
+                                    <option value="AC">AC</option>
+                                    <option value="AL">AL</option>
+                                    <option value="AM">AM</option>
+                                    <option value="AP">AP</option>
+                                    <option value="BA">BA</option>
+                                    <option value="CE">CE</option>
+                                    <option value="DF">DF</option>
+                                    <option value="ES">ES</option>
+                                    <option value="GO">GO</option>
+                                    <option value="MA">MA</option>
+                                    <option value="MG">MG</option>
+                                    <option value="MS">MS</option>
+                                    <option value="MT">MT</option>
+                                    <option value="PA">PA</option>
+                                    <option value="PB">PB</option>
+                                    <option value="PE">PE</option>
+                                    <option value="PI">PI</option>
+                                    <option value="PR">PR</option>
+                                    <option value="RJ">RJ</option>
+                                    <option value="RN">RN</option>
+                                    <option value="RO">RO</option>
+                                    <option value="RR">RR</option>
+                                    <option value="RS">RS</option>
+                                    <option value="SC">SC</option>
+                                    <option value="SE">SE</option>
+                                    <option value="SP">SP</option>
+                                    <option value="TO">TO</option>
+                                </select></p>
+                            <p><label for="ccid">Cidade:</label><input type="text" name="tcid" id="ccid" size="15" maxlength="40" placeholder="Sua Cidade" list="cidade"/></p>
+                            <datalist id="cidade">
+                                <option value="Rio de Janeiro"></option>
+                                <option value="Nova Iguaçu"></option>
+                                <option value="Itumbiara"></option>
+                            </datalist>
+                        </fieldset>
+
+                        <fieldset id="mensagem">
+                            <legend>Mensagem do Usuário</legend>
+                            <p><label for="curg">Grau de Urgência:</label> Mín <input type="range" name="turg" id="curg" min="0" max="10" step="2"/> Máx </p>
+                            <p><label for="cmsg">Mensagem:</label><textarea name="tmsg" id="cmsg" cols="35" rows="5" placeholder="Digite aqui sua mensagem"></textarea></p>
+                        </fieldset>
+
+                        <fieldset id="pedido">
+                            <legend>Quero um Google Glass</legend>
+                            <p><input type="checkbox" name="tped" id="cped" checked/><label for="cped">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                            <p><label for="ccor">Cor:</label><input type="color" name="tcor" id="ccor" value="#0000ff"/></p>
+                            <p><label for="cqtd">Quantidade:</label><input type="number" name="tqtd" id="cqtd" min="0" max="5" value="0"/></p>
+                            <p><label for="ctot">Preço Total: R$</label><input type="text" name="ttot" id="ctot" placeholder="Total a pagar" readonly/></p>
+                        </fieldset>
+
+                        <input alt="botao-enviar" type="image" name="tenviar" src="_imagens/botao-enviar.png"/>
+
+                    </form>
+                </article>
+            </section>
+
+            <footer id="rodape">
+                <p>Copyright &copy; 2015 - Luís Carlos Da Silva Santos<br />
+                    <a href="http://facebook.com" target="_blank">Facebook</a> | 
+                    <a href="http://twitter.com" target="_blank">Twitter</a></p>
+            </footer>
+        </div>
+    </body>
+</html>

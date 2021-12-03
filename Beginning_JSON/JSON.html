@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Beginning JSON</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="JSON.js"></script>
+    </head>
+    <body>
+        <div>JSON</div>
+        <form action="8-1.php" method="post" onsubmit="return formSubmit();">
+            First-Name:<input name="fname" type="text" size="25"/>
+           Last-Name:<input name="lname" type="text" size="25"/>
+        </form>
+        <script type="text/javascript">
+            function formSubmit(){
+                var xhr = new XMLHttpRequest();
+                    xhr.open("POST", "http://json.sandboxed.guru/chapter8/xss-post.php");
+                    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                    xhr.send("fname=ben&lname=smith&mySubmit=submit");
+                    return false;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Listener</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function manageEvent(eventObj, event, eventHandler) {
+                 if (eventObj.addEventListener) {
+                    eventObj.addEventListener(event, eventHandler,false);
+            } else if (eventObj.attachEvent) {
+                event = "on" + event;
+                eventObj.attachEvent(event, eventHandler);
+                }
+            }
+            window.onload=function() {
+            manageEvent(window,"message",receive);
+            };
+            function receive(e) {
+                var img = document.getElementById("image");
+                img.src = e.data.split(",")[0];
+                img.alt = e.data.split(",")[1];
+                e.source.postMessage("Received " + e.data,
+                "http://burningbird.net");
+            }
+        </script>
+    </head>
+    <body>
+       <img src="" id="image" alt="" />
+    </body>
+</html>

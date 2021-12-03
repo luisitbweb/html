@@ -1,0 +1,173 @@
+/*
+Copyright (c) 2019, luisitb! Inc. All rights reserved.
+Code licensed under the BSD License:
+version: 1.0 | 20190704
+*/
+/* Simple Reset.css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,input,button,textarea,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: none;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/* HTML5 display-role reset for older browsers */
+html{
+    color: #000;
+    background: #FFF;
+}
+body {
+    line-height: 1;
+    font-size: 88% /* Decide for yourself if you want to include this. */;
+}
+body,html {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+    -webkit-scrollbar-face-color: #99ccff;
+    -webkit-scrollbar-shadow-color: #ccccff;
+    -webkit-scrollbar-highlight-color: #ccccff;
+    -webkit-scrollbar-3dlight-color: #99ccff;
+    -webkit-scrollbar-darkshadow-color: #ccccff;
+    -webkit-scrollbar-track-color: #ccccff;
+    -webkit-scrollbar-arrow-color: #000033;
+    -moz-scrollbar-face-color: #99ccff;
+    -moz-scrollbar-shadow-color: #ccccff;
+    -moz-scrollbar-highlight-color: #ccccff;
+    -moz-scrollbar-3dlight-color: #99ccff;
+    -moz-scrollbar-darkshadow-color: #ccccff;
+    -moz-scrollbar-track-color: #ccccff;
+    -moz-scrollbar-arrow-color: #000033;
+    -ms-scrollbar-face-color: #99ccff;
+    -ms-scrollbar-shadow-color: #ccccff;
+    -ms-scrollbar-highlight-color: #ccccff;
+    -ms-scrollbar-3dlight-color: #99ccff;
+    -ms-scrollbar-darkshadow-color: #ccccff;
+    -ms-scrollbar-track-color: #ccccff;
+    -ms-scrollbar-arrow-color: #000033;
+    -o-scrollbar-face-color: #99ccff;
+    -o-scrollbar-shadow-color: #ccccff;
+    -o-scrollbar-highlight-color: #ccccff;
+    -o-scrollbar-3dlight-color: #99ccff;
+    -o-scrollbar-darkshadow-color: #ccccff;
+    -o-scrollbar-track-color: #ccccff;
+    -o-scrollbar-arrow-color: #000033;
+    scrollbar-face-color: #99ccff;
+    scrollbar-shadow-color: #ccccff;
+    scrollbar-highlight-color: #ccccff;
+    scrollbar-3dlight-color: #99ccff;
+    scrollbar-darkshadow-color: #ccccff;
+    scrollbar-track-color: #ccccff;
+    scrollbar-arrow-color: #000033;
+}
+fieldset,img{
+    border: 0;
+}
+address, caption, cite, code, dfn, em, strong, th,
+var, optgroup, input, button, textarea, select, option{
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+input,button,textarea,select{
+    *font-size: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+    padding: .6em 0;
+    margin: 0 15px;
+}
+ol, ul {
+    list-style: none;
+}
+li{
+    list-style: none;
+}
+ins{
+    text-decoration: none;
+}
+del{
+    text-decoration: line-through;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.floatLeft{
+    float: left;
+    padding: .5em .5em .5em 0;
+}
+.floatRight{
+    float: right;
+    padding: .5em 0 .5em .5em;
+}
+abbr,acronym{
+    border:0;
+    font-variant: normal;
+}
+sup{
+    vertical-align: baseline;
+}
+sub{
+    vertical-align: baseline;
+}
+legend{
+    color: #000;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus{
+    outline: none;
+}
+caption,th{
+    text-align: left;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Main Content ----------------------------- */
+
+/* Header ----------------------------- */
+
+/* Footer ----------------------------- */
+
+/* Typography ----------------------------- */
+
+/* Layout ----------------------------- */

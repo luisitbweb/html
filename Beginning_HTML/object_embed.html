@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>embed & object</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <object data="../w3schools/_imagens/travessos.mp4" width="300" height="200" type="video/mpeg">
+                <param name="movie" value="video/mpeg"/>
+                <param name="play" value="TRUE"/>
+                <param name="loop" value="FALSE"/>
+                <embed src="../w3schools/_imagens/travessos.mp4" width="300" height="200" play="TRUE" loop="FALSE" quality="" 
+                       type="application/x-shockwave-flash" pluginspage="">
+            </object>
+
+            <object width="300" height="42" type="audio/mp3" data="audo/my_music.mp3">
+                <param name="src" value="audio/my_music.mp3"/>
+                <param name="autoplay" value="true"/>
+                <param name="autostart" value="1"/>
+                <embed src="../w3schools/_imagens/Martin.mp3" width="300" height="42"/>
+            </object>
+        </div>
+    </body>
+</html>
